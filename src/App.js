@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Container, Typography } from '@mui/material';
+import AddTodo from './component/addTodo';
+import TodoList from './component/todolist';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Container maxWidth="sm" sx={{ mt: 5,backgroundColor:"#00bcd466", padding:5,borderRadius:"10px"}}>
+      <Typography variant="h3" gutterBottom sx={{color:"#0592a3",fontFamily:"cursive"}}>
+        Redux Todo List
+      </Typography>
+      <AddTodo/>
+      <TodoList/>
+    </Container>
+
+    </>
   );
 }
 
